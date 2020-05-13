@@ -1,15 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import configureStore from 'store/configureStore'
 import { Provider } from 'react-redux'
+import configureStore from 'store/configureStore.js'
 import reducers from 'store/reducers/index.js'
+import App from 'src/App.js'
 
 const store = configureStore({ reducers })
 function MainComponent () {
-  console.log(store.getState())
   return (
     <Provider store={store}>
-      <div>hi</div>
+      <App />
     </Provider>
   )
 }

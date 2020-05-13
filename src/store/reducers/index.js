@@ -1,5 +1,5 @@
-import dragList from 'store/reducers/dragList.js'
+import planner from 'store/reducers/planner.js'
 
 export default {
-    dragList
+    planner
 }

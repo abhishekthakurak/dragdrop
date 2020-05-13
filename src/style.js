@@ -1,5 +1,10 @@
-import { css } from '@emotion/core'
+import { Global } from '@emotion/core'
 
-export const wrapStyle = css`
-    background: red;
+const global = `
+    body {
+        margin: 0;
+        padding: 0;
+    }
 `
+
+export const Core = () => (<Global styles={global} />)

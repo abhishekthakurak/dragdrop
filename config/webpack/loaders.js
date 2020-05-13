@@ -27,7 +27,7 @@ export default {
     },
     {
       exclude: [/\.(js|css|mjs|html|json)$/],
-      test: /\.(png|jpe?g|gif|svg)$/i,
+      test: /\.(png|jpg|jpe?g|gif|svg)$/i,
       use: [
         {
           loader: 'file-loader',

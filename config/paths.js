@@ -7,4 +7,8 @@ export default {
   indexHtml: resolveApp('src/index.html'),
   reportHtml: resolveApp('report.html'),
   store: resolveApp('src/store'),
+  src: resolveApp('src'),
+  assets: resolveApp('src/assets'),
+  pages: resolveApp('src/pages'),
+  components: resolveApp('src/components'),
 }
