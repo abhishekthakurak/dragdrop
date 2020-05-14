@@ -1,7 +1,6 @@
 
 import { css } from '@emotion/core'
 
-
 export const planItemStyle = css`
     width: 270px;
     margin: 8px;
@@ -27,8 +26,12 @@ export const headerStyle = css`
 
 export const bottomBarStyle = css` 
     width: calc(100% - 16px);
-    border-radius: 3px;
-    color: #5e6c84;
     margin: 8px;
-    padding: 4px 8px;
+    background: #fff;
+    .button {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        float: right;  
+    }
 `
