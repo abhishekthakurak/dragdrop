@@ -8,3 +8,7 @@ node version support >= 12.16.1
 
 #### Steps
 yarn start
+
+#### How it looks
+
+(https://bit.ly/2X0WtoM)
