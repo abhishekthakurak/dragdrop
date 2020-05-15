@@ -16,6 +16,7 @@ export const planCardStyle = css`
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    padding: 12px 8px;
 `
 
 export const headerStyle = css`

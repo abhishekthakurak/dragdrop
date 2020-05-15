@@ -19,9 +19,32 @@ export default function DragContainer ({ data = {}, id }) {
             planItem
         }
     }), [id])
+
+    const handleOnDrop = useCallback(({newPlanId, event}) => {
+        event.preventDefault()
+        event.stopPropagation()
+        const planId = event.dataTransfer.getData('planId')
+        const taskId = event.dataTransfer.getData('taskId')
+        dispatch({
+            type: 'MOVE_TASK_ACROSS_PLAN',
+            payload: {
+                planId,
+                newPlanId,
+                taskId
+            }
+        })
+    }, [])
+
+    const handleOnDragOver = useCallback((event) => {
+        event.preventDefault()
+    }, [])
+
     return (
         <div css={planItemStyle}>
-            <div css={planCardStyle}>
+            <div css={planCardStyle} 
+                onDrop={(event) => handleOnDrop({newPlanId: id, event})}
+                onDragOver={handleOnDragOver}
+            >
                 <label css={headerStyle}>
                     {title}
                 </label>

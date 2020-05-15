@@ -2,23 +2,23 @@ const initialState = {
     plans: [
     {
       title: 'To Do',
-      planItems: ['hi']
+      planItems: ['Rent Pay']
     }, 
     {
       title: 'Development',
-      planItems: []
+      planItems: ['Agreement']
     },
     {
       title: 'QA',
-      planItems: []
+      planItems: ['Rent Pay Landing']
     }, 
     {
       title: 'Ready For Release',
-      planItems: []
+      planItems: ['Rent Pay Home']
     },
     {
       title: 'Done',
-      planItems: []
+      planItems: ['Rent Pay Hooks']
     }
   ]}
   const planner = (state = initialState, action) => {
@@ -37,6 +37,19 @@ const initialState = {
         if (state.plans[payload.planId]) {
           state.plans[payload.planId].planItems[payload.id] = payload.planItem
         }
+
+      case 'MOVE_TASK_ACROSS_PLAN':
+        let {planId, newPlanId, taskId} = payload
+        const movedTask = state.plans[planId].planItems.splice(taskId, 1)
+        state.plans[newPlanId].planItems.push(movedTask)
+        return state
+      
+      case 'MOVE_TASK_WITHIN_PLAN':
+        let {newTaskId, currentPlanId, prevTaskId} = payload
+        let swapper = state.plans[currentPlanId].planItems[newTaskId]
+        state.plans[currentPlanId].planItems[newTaskId] = state.plans[currentPlanId].planItems[prevTaskId]
+        state.plans[currentPlanId].planItems[prevTaskId] = swapper
+        return state
       default:
         return state
     }
