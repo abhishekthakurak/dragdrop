@@ -40,8 +40,8 @@ const initialState = {
 
       case 'MOVE_TASK_ACROSS_PLAN':
         let {planId, newPlanId, taskId} = payload
-        const movedTask = state.plans[planId].planItems.splice(taskId, 1)
-        state.plans[newPlanId].planItems.push(movedTask)
+        const [movedTask] = state.plans[planId].planItems.splice(taskId, 1)
+        movedTask && state.plans[newPlanId].planItems.push(movedTask)
         return state
       
       case 'MOVE_TASK_WITHIN_PLAN':

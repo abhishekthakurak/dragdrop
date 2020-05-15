@@ -28,7 +28,6 @@ export const headerStyle = css`
 export const bottomBarStyle = css` 
     width: calc(100% - 16px);
     margin: 8px;
-    background: #fff;
     .button {
         width: 30px;
         height: 30px;

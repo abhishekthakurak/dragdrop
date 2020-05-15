@@ -14,8 +14,6 @@ export default function DragItem ({ planItems, planId }) {
     }, [])
 
     const handleOnDrop = useCallback(({newTaskId, event}) => {
-        event.preventDefault()
-        event.stopPropagation()
         const planId = event.dataTransfer.getData('planId')
         const taskId = event.dataTransfer.getData('taskId')
         dispatch({
