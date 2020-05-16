@@ -4,9 +4,9 @@ import paths from '../config/paths'
 import rimraf from 'rimraf'
 import WebpackDevServer from 'webpack-dev-server'
 const build = async () => {
-  rimraf.sync(paths.dist)
+  rimraf.sync(paths.build)
   const options = {
-    contentBase: paths.dist,
+    contentBase: paths.build,
     hot: true,
     host: 'localhost',
     historyApiFallback: true

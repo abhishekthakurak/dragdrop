@@ -13,7 +13,7 @@ export default {
   output: {
     filename: DEV ? 'js/[name].js' : 'js/[name].[chunkhash:8].js',
     chunkFilename: DEV ? 'js/[name].js' : 'js/[name].[chunkhash:8].js',
-    path: paths.dist
+    path: paths.build
   },
   resolve: {
     alias,

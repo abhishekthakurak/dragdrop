@@ -2,7 +2,7 @@ const initialState = {
     plans: [
     {
       title: 'To Do',
-      planItems: ['Rent Pay']
+      planItems: ['Pay']
     }, 
     {
       title: 'Development',
@@ -10,15 +10,15 @@ const initialState = {
     },
     {
       title: 'QA',
-      planItems: ['Rent Pay Landing']
+      planItems: ['Landing']
     }, 
     {
       title: 'Ready For Release',
-      planItems: ['Rent Pay Home']
+      planItems: ['Home']
     },
     {
       title: 'Done',
-      planItems: ['Rent Pay Hooks']
+      planItems: ['Hooks']
     }
   ]}
   const planner = (state = initialState, action) => {

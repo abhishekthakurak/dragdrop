@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  "homepage": "https://abhishekthakurak.github.io/dragdrop/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "yarn && node --es-module-specifier-resolution=node --experimental-modules ./scripts/start.js"
+    "start": "yarn && node --es-module-specifier-resolution=node --experimental-modules ./scripts/start.js",
+    "build": "node --es-module-specifier-resolution=node --experimental-modules ./scripts/build.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "abhishekthakurak",
   "dependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
@@ -31,6 +34,10 @@
     "redux-thunk": "^2.3.0",
     "webpack": "^4.41.6",
     "webpack-bundle-analyzer": "^3.6.0",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.10.3",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
