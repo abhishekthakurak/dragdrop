@@ -8,7 +8,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "yarn && node --es-module-specifier-resolution=node --experimental-modules ./scripts/start.js",
-    "build": "node --es-module-specifier-resolution=node --experimental-modules ./scripts/build.js",
+    "build": "NODE_ENV='production' node --es-module-specifier-resolution=node --experimental-modules ./scripts/build.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
