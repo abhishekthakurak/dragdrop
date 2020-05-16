@@ -7,7 +7,7 @@ Simple drag drop task manager functionality using react, redux, emotion js and n
 node version support >= 12.16.1
 
 #### Steps
-yarn start
+PORT=5000 yarn start
 
 #### How it looks
 
