@@ -26,12 +26,18 @@ export default function DragItem ({ planItems, planId }) {
         })
     }, [])
 
+    // this can be used to do things when an item is been dragged
+    const handleOnDragOver = useCallback((event) => {
+        event.preventDefault() // do not allow browser to do default things
+    }, [])
+
     return (
         <Fragment>
             {planItems.map((item, index) => (
                 <div css={itemStyle} key={index} draggable='true'
                     onDragStart={(event) => handleDragStart({event, planId, index})}
                     onDrop={(event) => handleOnDrop({newTaskId: index, event})}
+                    onDragOver={handleOnDragOver}
                     >
                     <TextAndInput item={item} id={index} planId={planId} />
                 </div>

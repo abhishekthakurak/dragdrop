@@ -34,8 +34,9 @@ export default function DragContainer ({ data = {}, id }) {
         })
     }, [])
 
+  // this can be used to do things when an item is been dragged
     const handleOnDragOver = useCallback((event) => {
-        event.preventDefault()
+        event.preventDefault() // do not allow browser to do default things
     }, [])
 
     return (
