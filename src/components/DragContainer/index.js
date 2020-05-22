@@ -21,7 +21,6 @@ export default function DragContainer ({ data = {}, id }) {
     }), [id])
 
     const handleOnDrop = useCallback(({newPlanId, event}) => {
-        event.preventDefault()
         event.stopPropagation()
         const planId = event.dataTransfer.getData('planId')
         const taskId = event.dataTransfer.getData('taskId')

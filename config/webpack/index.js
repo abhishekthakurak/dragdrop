@@ -7,7 +7,7 @@ import optimization from './optimization.js'
 const DEV = process.env.NODE_ENV !== 'production'
 
 export default {
-  name: 'housing-slave-repo',
+  name: 'drag-drop',
   entry: paths.entry,
   mode: DEV ? 'development' : 'production',
   output: {
@@ -16,8 +16,7 @@ export default {
     path: paths.build
   },
   resolve: {
-    alias,
-    symlinks: false
+    alias
   },
   module: {
     ...loaders
